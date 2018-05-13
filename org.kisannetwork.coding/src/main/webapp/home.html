@@ -1,0 +1,14 @@
+<div>
+	<div class="alert alert-warning">
+		<span class="close" data-dismiss="alert">&times;</span> <strong>Warning!</strong>
+		Click on below list element to send sms to particular users or create
+		your User first first
+	</div>
+	<!-- <div ng-show="users.length < 1 "> Please Create User first </div> -->
+	<ul class="list-group" ng-repeat="user in users.reverse()">
+		<li class="list-group-item" ng-click="sendOTPToUser(user);">{{user.firstName}}
+			{{user.lastName}}, number= {{user.number}} <span class="badge" title="Edit "><span
+				class="glyphicon glyphicon-edit"></span></span>
+		</li>
+	</ul>
+</div>

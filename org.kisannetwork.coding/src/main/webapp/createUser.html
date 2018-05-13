@@ -1,0 +1,41 @@
+
+<form class="" name="createUser" ng-submit=" createUsers();">
+
+	<div class="form-group row">
+		<label for="example-text-input" class="col-2 col-form-label">FirstName</label>
+		<div class="col-10">
+			<input class="form-control" required type="text"
+				ng-model="user.firstName" id="example-text-input">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="example-search-input" class="col-2 col-form-label">LastName</label>
+		<div class="col-10">
+			<input class="form-control" required type="search"
+				ng-model="user.lastName" id="example-search-input">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label for="example-number-input" class="col-2 col-form-label">Number</label>
+		<div class="col-10">
+			<input class="form-control" required type="number" value="999999999"
+				ng-model="user.number" id="example-number-input">
+		</div>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+<br>
+<br>
+<br>
+<div>
+
+	<!-- <div ng-show="users.length < 1 "> Please Create User first </div> -->
+	<ul class="list-group" ng-repeat="user in users.reverse()">
+		<li class="list-group-item" ng-click="editUser(user)">{{user.firstName}}
+			{{user.lastName}} <span class="badge" title="Edit "><span
+				class="glyphicon glyphicon-edit"></span></span>
+		</li>
+	</ul>
+</div>
